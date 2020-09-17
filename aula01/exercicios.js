@@ -6,7 +6,8 @@ const itens = [
   { nome: "Fubá", valor: 2.10 },
   { nome: "Kinder Ovo", valor: 10 },
 ]
-// console.log(itens);
+console.log(itens);
+
 
 // 1.
 
@@ -20,7 +21,7 @@ const desconto = (percentual, itens) => {
   return itens;
 }
   
-// console.log('1.', desconto(10, itens));
+// console.log('1.', desconto(20, itens));
 
 
 // 2.
@@ -31,20 +32,35 @@ const filtrar_itens_valor = (valor, itens)  => {
   });
 }
   
-var itens_filtrados = filtrar_itens_valor(5.0, itens)
+var itens_filtrados = filtrar_itens_valor(5, itens)
 // console.log('2.', itens_filtrados);
   
 
 // 3.
-const busca_item = (nome, itens) => {
-  return itens.find(item => {
-    return item.nome.indexOf(nome) > -1;
-  })
-}
+// const busca_item = (nome, itens) => {
+//   return itens.find(item => {
+//     return item.nome.indexOf(nome) > -1;
+//   })
+// }
   
-var item_buscado = busca_item("Fubá", itens);
+// var item_buscado = busca_item("Fubá", itens);
 // console.log('3.', item_buscado);
   
+
+// const busca_item = (nome, itens) => {
+//   let resultado = null;
+
+//   itens.map(item => {
+//     if(item.nome === nome){
+//       resultado = item;
+//     }
+//   })
+
+//   console.log('3.', resultado);
+// }
+
+// busca_item("Fubá", itens);
+
 
 //4
 const desconto_condicional = (valor_elegivel, percentual_desconto, itens) => {
@@ -53,5 +69,5 @@ const desconto_condicional = (valor_elegivel, percentual_desconto, itens) => {
 }
   
 const produtos_com_desconto_condicional = desconto_condicional(5.00, 20, itens);  
-// console.log('4.', produtos_com_desconto_condicional);
+console.log('4.', produtos_com_desconto_condicional);
   

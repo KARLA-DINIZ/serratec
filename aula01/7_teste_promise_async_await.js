@@ -12,7 +12,7 @@ const fakeAPI = (num) => new Promise((resolve, reject) => {
 //   fakeAPI(1)
 //     .then(response => {
 //       (console.log(response))
-//       fakeAPI(1)
+//       fakeAPI(2)
 //         .then(response => {
 //           (console.log(response))
 //           fakeAPI(1)
@@ -26,6 +26,18 @@ const fakeAPI = (num) => new Promise((resolve, reject) => {
 //     }).catch(err => (console.log('error ', err)));
 // }
 
+// executarPromise();
+
+// function executarPromise_() {
+//   try {
+//     console.log(fakeAPI(0));
+//     console.log(fakeAPI(0));
+//     console.log(fakeAPI(0));
+//   } catch (error) {
+//     console.log("Error:", error) 
+//   }
+// }
+
 // async function executarPromise() {
 //   try {
 //     console.log(await fakeAPI(1));
@@ -36,24 +48,52 @@ const fakeAPI = (num) => new Promise((resolve, reject) => {
 //   }
 // }
 
-// async function executarPromise() {
+// async function executarPromise2() {
 //   try {
-//     console.log(await fakeAPI(1));
+//     console.log(await fakeAPI(3));
+//     console.log(await fakeAPI(3));
+//     console.log(await fakeAPI(3));
 //   } catch (error) {
 //     console.log("Error:", error) 
 //   }
+// }
 
+// executarPromise_();
+// executarPromise();
+// executarPromise2();
+
+
+// async function executarPromise() {
 //   try {
+//     console.log(await fakeAPI(1));
 //     console.log(await fakeAPI(2));
-//   } catch (error) {
-//     console.log("Error:", error) 
-//   }
-
-//   try {
 //     console.log(await fakeAPI(1));
 //   } catch (error) {
 //     console.log("Error:", error) 
 //   }
 // }
+
+// executarPromise();
+
+
+async function executarPromise() {
+  try {
+    console.log(await fakeAPI(1));
+  } catch (error) {
+    console.log("Error:", error) 
+  }
+
+  try {
+    console.log(await fakeAPI(2));
+  } catch (error) {
+    console.log("Error:", error) 
+  }
+
+  try {
+    console.log(await fakeAPI(1));
+  } catch (error) {
+    console.log("Error:", error) 
+  }
+}
 
 executarPromise();
