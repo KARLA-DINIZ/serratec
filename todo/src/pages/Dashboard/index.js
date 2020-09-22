@@ -21,6 +21,10 @@ const Dashboard = () => {
     }, []
   );
 
+  useEffect(() => {
+    loadTasks()
+  }, [loadTasks]);
+
   const tasks_concluded_qtd = useMemo(
     () => {
       const filtered = tasks.filter(task => {
@@ -34,10 +38,6 @@ const Dashboard = () => {
   const tasks_qtd = useMemo(
     () => tasks.length, [tasks]
   )
-
-  useEffect(() => {
-    loadTasks()
-  }, [loadTasks]);
 
   return (
     <>
